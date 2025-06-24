@@ -1,0 +1,28 @@
+package com.example.nguyentanthien_mobile;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CartManager {
+    private static CartManager instance;
+    private final List<CartItem> cartItems;
+
+    private CartManager() {
+        cartItems = new ArrayList<>();
+    }
+
+    public static CartManager getInstance() {
+        if (instance == null) {
+            instance = new CartManager();
+        }
+        return instance;
+    }
+
+    public void addToCart(CartItem item) {
+        cartItems.add(item);
+    }
+
+    public List<CartItem> getCartItems() {
+        return cartItems;
+    }
+}
