@@ -23,7 +23,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        // Ánh xạ view
+        
         textName = findViewById(R.id.textProductName);
         textPrice = findViewById(R.id.textProductPrice);
         imageProduct = findViewById(R.id.imageProduct);
@@ -32,14 +32,14 @@ public class DetailActivity extends AppCompatActivity {
         btnAddToCart = findViewById(R.id.btnAddToCart);
         btnOrderNow = findViewById(R.id.btnOrderNow);
         btnBack = findViewById(R.id.btnBack);
-        btnViewCart = findViewById(R.id.btnViewCart); // Thêm dòng này
+        btnViewCart = findViewById(R.id.btnViewCart); 
 
-        // Nhận dữ liệu từ Intent
+        
         String name = getIntent().getStringExtra("name");
         String price = getIntent().getStringExtra("price");
         int imageResId = getIntent().getIntExtra("imageResId", R.drawable.shirt1);
 
-        // Gán dữ liệu vào giao diện
+        
         textName.setText(name);
         textPrice.setText(price);
         imageProduct.setImageResource(imageResId);
