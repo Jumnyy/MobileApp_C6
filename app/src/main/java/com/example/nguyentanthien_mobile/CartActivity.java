@@ -29,23 +29,23 @@ public class CartActivity extends AppCompatActivity {
             TextView name = itemView.findViewById(R.id.txtName);
             TextView sizeColor = itemView.findViewById(R.id.txtSizeColor);
             TextView price = itemView.findViewById(R.id.txtPrice);
-//            Button btnRemove = itemView.findViewById(R.id.btnRemove);
-//            Button btnBuyNow = itemView.findViewById(R.id.btnBuyNow);
+            Button btnRemove = itemView.findViewById(R.id.btnRemove);
+            Button btnBuyNow = itemView.findViewById(R.id.btnBuyNow);
 
             img.setImageResource(item.getImageResId());
             name.setText(item.getName());
             sizeColor.setText("Size " + item.getSize() + " - Màu " + item.getColor());
             price.setText(item.getPrice());
 
-//            btnRemove.setOnClickListener(v -> {
-//                CartManager.getInstance().removeItem(item);
-//                cartLayout.removeView(itemView);
-//                Toast.makeText(this, "Đã xóa sản phẩm", Toast.LENGTH_SHORT).show();
-//            });
+            btnRemove.setOnClickListener(v -> {
+                CartManager.getInstance().removeItem(item);
+                cartLayout.removeView(itemView);
+                Toast.makeText(this, "Đã xóa sản phẩm", Toast.LENGTH_SHORT).show();
+            });
 
-//            btnBuyNow.setOnClickListener(v -> {
-//                Toast.makeText(this, "Mua ngay: " + item.getName(), Toast.LENGTH_SHORT).show();
-//            });
+            btnBuyNow.setOnClickListener(v -> {
+                Toast.makeText(this, "Mua ngay: " + item.getName(), Toast.LENGTH_SHORT).show();
+            });
 
             cartLayout.addView(itemView);
         }
