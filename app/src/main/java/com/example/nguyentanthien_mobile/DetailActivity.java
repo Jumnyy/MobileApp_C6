@@ -59,7 +59,15 @@ public class DetailActivity extends AppCompatActivity {
         btnOrderNow.setOnClickListener(v -> {
             String size = getSelectedSize();
             String color = getSelectedColor();
-            Toast.makeText(this, "Đặt hàng: " + name + " - Size " + size + " - Màu " + color, Toast.LENGTH_LONG).show();
+
+            // Chuyển sang OrderActivity
+            Intent intent = new Intent(DetailActivity.this, OrderActivity.class);
+            intent.putExtra("name", name);
+            intent.putExtra("price", price);
+            intent.putExtra("size", size);
+            intent.putExtra("color", color);
+            intent.putExtra("imageResId", imageResId);
+            startActivity(intent);
         });
 
         // Nút quay lại

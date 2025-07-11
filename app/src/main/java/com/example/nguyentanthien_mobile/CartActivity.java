@@ -47,6 +47,22 @@ public class CartActivity extends AppCompatActivity {
                 Toast.makeText(this, "Mua ngay: " + item.getName(), Toast.LENGTH_SHORT).show();
             });
 
+            Button btnIncrease = itemView.findViewById(R.id.btnIncrease);
+            Button btnDecrease = itemView.findViewById(R.id.btnDecrease);
+            TextView txtQuantity = itemView.findViewById(R.id.txtQuantity);
+
+            btnIncrease.setOnClickListener(v -> {
+                int qty = Integer.parseInt(txtQuantity.getText().toString());
+                txtQuantity.setText(String.valueOf(qty + 1));
+            });
+
+            btnDecrease.setOnClickListener(v -> {
+                int qty = Integer.parseInt(txtQuantity.getText().toString());
+                if (qty > 1) {
+                    txtQuantity.setText(String.valueOf(qty - 1));
+                }
+            });
+
             cartLayout.addView(itemView);
         }
         Button btnBack = findViewById(R.id.btnBack);

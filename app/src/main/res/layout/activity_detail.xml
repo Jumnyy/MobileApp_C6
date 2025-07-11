@@ -10,7 +10,6 @@
       android:padding="20dp"
       android:gravity="center_horizontal">
 
-    <!-- Ảnh sản phẩm -->
 
     <ImageView
         android:id="@+id/imageProduct"
@@ -19,7 +18,6 @@
         android:scaleType="centerInside"
         android:src="@drawable/shirt1"/>
 
-    <!-- Tên sản phẩm -->
     <TextView
         android:id="@+id/textProductName"
         android:layout_width="wrap_content"
@@ -28,8 +26,6 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp" />
-
-    <!-- Giá -->
     <TextView
         android:id="@+id/textProductPrice"
         android:layout_width="wrap_content"
@@ -39,7 +35,6 @@
         android:textSize="22sp"
         android:layout_marginTop="10dp" />
 
-    <!-- Size -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -105,7 +100,6 @@
           android:text="Xám" />
     </RadioGroup>
 
-    <!-- Nút Thêm vào giỏ -->
     <Button
         android:id="@+id/btnAddToCart"
         android:layout_width="match_parent"

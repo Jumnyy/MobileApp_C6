@@ -34,4 +34,5 @@ public class CartItem {
     public int getImageResId() {
         return imageResId;
     }
+
 }
